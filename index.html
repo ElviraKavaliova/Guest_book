@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <title>Гостевая книга</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
+
+</head>
+
+<body>
+    <h1>Гостевая книга</h1>
+    <form id="f1" action="javascript:void(null)" onsubmit="submitForm()">
+        <table>
+            <tr c>
+                <td class="text">
+                    <img src="/imges/_318-10802.jpg" class="icon"> Ваше имя:
+                </td>
+                <td class="necessarily">*</td>
+                <td>
+                    <input type="text" id="user_name" name="user_name" maxlength="150" onchange="checkParams()" onkeyup="checkParams()">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="text">
+                   <img src="imges/103598.png" class="icon"> Ваше сообщение:
+                </td>
+                <td class="necessarily">*</td>
+                <td>
+                    <textarea id="message" name="message" id="ms" rows="5" wrap="soft" onchange="checkParams()" onkeyup="checkParams()"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="text">
+                    <img src="imges/gender.png" class="icon">Пол:
+                </td>
+                <td></td>
+                <td>
+                    <input type="radio" class="r1" name="sex" value="man" checked><span class="sex">Мужской</span>
+                    <input type="radio" class="r1" name="sex" value="woman"><span class="sex">Женский</span>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <input type="submit" name="submit" id="submit" value="Отправить" disabled="disabled">
+        </p>
+    </form>
+
+    <h2>Отзывы</h2>
+
+    <!-- <div id="reviews"></div> -->
+    <table id="reviews"></table>
+
+</body>
+
+</html>
